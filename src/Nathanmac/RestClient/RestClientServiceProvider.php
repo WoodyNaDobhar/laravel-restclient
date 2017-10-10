@@ -18,7 +18,7 @@ class RestClientServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$configPath = __DIR__ . '/../../config/rest.php';
+		$configPath = __DIR__ . '/../../../../../../config/rest.php';
 		$this->mergeConfigFrom($configPath, 'restclient');
 	}
 
