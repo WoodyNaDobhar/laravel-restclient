@@ -1,4 +1,4 @@
-<?php namespace Nathanmac\RestClient;
+<?php namespace WoodyNaDobhar\RestClient;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -35,7 +35,7 @@ class RestClientServiceProvider extends ServiceProvider {
 
 		$this->app->booting(function() {
 			$loader = \Illuminate\Foundation\AliasLoader::getInstance();
-			$loader->alias('RestClient', 'Nathanmac\RestClient\Facades\RestClient');
+			$loader->alias('RestClient', 'WoodyNaDobhar\RestClient\Facades\RestClient');
 		});
 	}
 

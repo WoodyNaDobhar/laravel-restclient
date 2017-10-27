@@ -1,6 +1,6 @@
 <?php 
 
-namespace Nathanmac\RestClient;
+namespace WoodyNaDobhar\RestClient;
 
 use Config, Exception;
 
@@ -18,10 +18,8 @@ class RestClient {
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
         curl_setopt($ch, CURLOPT_TIMEOUT, $timeout);
 
-        $options = Config::get('restclient::options');
-        foreach ($options as $option => $value) {
-            curl_setopt($ch, $option, $value);
-        }
+        $options = Config::get('rest.options');
+        curl_setopt_array($ch, $options);
 
         if (is_array($headers) && count($headers) > 0)
             curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
@@ -46,10 +44,8 @@ class RestClient {
         curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
         curl_setopt($ch, CURLOPT_TIMEOUT, $timeout);
 
-        $options = Config::get('restclient::options');
-        foreach ($options as $option => $value) {
-            curl_setopt($ch, $option, $value);
-        }
+        $options = Config::get('rest.options');
+        curl_setopt_array($ch, $options);
 
         if (is_array($headers) && count($headers) > 0)
             curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
@@ -74,10 +70,8 @@ class RestClient {
         curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
         curl_setopt($ch, CURLOPT_TIMEOUT, $timeout);
 
-        $options = Config::get('restclient::options');
-        foreach ($options as $option => $value) {
-            curl_setopt($ch, $option, $value);
-        }
+        $options = Config::get('rest.options');
+        curl_setopt_array($ch, $options);
 
         if (is_array($headers) && count($headers) > 0)
             curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
@@ -101,10 +95,8 @@ class RestClient {
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "DELETE");
         curl_setopt($ch, CURLOPT_TIMEOUT, $timeout);
 
-        $options = Config::get('restclient::options');
-        foreach ($options as $option => $value) {
-            curl_setopt($ch, $option, $value);
-        }
+        $options = Config::get('rest.options');
+        curl_setopt_array($ch, $options);
 
         if (is_array($headers) && count($headers) > 0)
             curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);

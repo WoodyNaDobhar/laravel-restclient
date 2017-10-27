@@ -1,21 +1,26 @@
 {
     "name": "woodynadobhar/laravel-restclient",
     "description": "Simple RestClient for Laravel 5",
+    "keywords": ["laravel", "5", "framework", "Laravel-Restclient", "Laravel Restclient", "woodynadobhar"],
     "license": "MIT",
     "authors": [
         {
             "name": "Nathan Macnamara",
             "email": "nathan.macnamara@arrowecs.co.uk"
+        },
+        {
+            "name": "Woody NaDobhar",
+            "email": "woodynadobhar@hotmail.com"
         }
     ],
     "require": {
-        "php": ">=5.4.0",
+        "php": ">=7",
         "lib-curl": "*",
         "illuminate/support": "~5.0"
     },
     "autoload": {
         "psr-0": {
-            "Nathanmac\\RestClient\\": "src/"
+            "WoodyNaDobhar\\RestClient\\": "src/"
         }
     },
     "minimum-stability": "dev"
